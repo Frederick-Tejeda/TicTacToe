@@ -1,0 +1,107 @@
+*{margin: 0; padding: 0}
+
+:root{
+    --around: space-around;
+    --between: space-between;
+    --end: flex-end;
+}
+
+body, article, footer button, article div, footer aside{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+main, article div{position: relative}
+
+section, footer, article, article div span{position: absolute}
+
+body{
+    overflow: hidden; 
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 80vmin; 
+    height: 80vmin; 
+    border: 2px solid gray;
+    padding: 1%;
+    border-radius: 2%;
+}
+
+article{
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5vmin;
+    gap: 3%
+}
+
+article div{
+    display: inline-block; 
+    border: 1px solid black;
+    width: 25%;
+    height: 80%;
+    border-radius: 5px;
+    justify-content: var(--between);
+    padding: 1% 3%;
+}
+
+article select{
+    width: 25%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 4vmin;
+}
+
+article div span{
+    bottom: 2%; 
+    right: 10%; 
+    font-size: 4vmin;
+}
+
+section{
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 55vmin; 
+    height: 55vmin; 
+}
+
+footer{
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 5vmin;
+}
+
+footer aside{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    justify-content: var(--around);
+}
+
+footer aside button{
+    width: 30%;
+    height: 80%;
+}
+
+section div{
+    display: flex;
+    justify-content: var(--end);
+    align-items: var(--end);
+    border: 2px solid gray
+}
+
+#one, #two, #three{ border-top: none }
+#one, #four, #seven{ border-left: none }
+#seven, #eight, #nine{ border-bottom: none }
+#three, #six, #nine{ border-right: none }
